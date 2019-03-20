@@ -6,8 +6,8 @@ require_relative "restricted_array.rb"
 
 # Calculates the length of the restricted array. All values are integers.
 # The restricted_array is terminated by 'nil' i.e. array[length] = nil
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: linear or O(n), where n is the length of the input array
+# Space complexity: O(1)
 def length(array)
   index = 0
   while array[index] != nil
@@ -17,8 +17,8 @@ def length(array)
 end
 
 # Prints each integer values in the array
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: linear or O(n), where n is the length of the input array
+# Space complexity: O(1)
 def print_array(array)
   index = 0
   while array[index] != nil
@@ -29,8 +29,8 @@ end
 
 # For an unsorted array, searches for 'value_to_find'.
 # Returns true if found, false otherwise.
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n), where n is the number of values in the array
+# Space complexity: O(1)
 def search(array, length, value_to_find)
   length.times do |index|
     return true if array[index] == value_to_find
@@ -40,8 +40,8 @@ end
 
 # Finds and returns the largest integer value the array
 # Assumes that the array is not sorted.
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n), where n is the number of values in the array
+# Space complexity: O(1)
 def find_largest(array, length)
   largest = nil
   length.times do |index|
@@ -52,8 +52,8 @@ end
 
 # Finds and returns the smallest integer value in the array
 # Assumes that the array is not sorted.
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n), where n is the number of values in the array
+# Space complexity: O(1)
 def find_smallest(array, length)
   smallest = nil
   length.times do |index|
@@ -63,8 +63,8 @@ def find_smallest(array, length)
 end
 
 # Reverses the values in the integer array in place
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(n), where n is the number of values in the array
+# Space complexity: O(1)
 def reverse(array, length)
   if length > 1
     f = 0
@@ -83,8 +83,8 @@ end
 
 # For an array sorted in ascending order, searches for 'value_to_find'.
 # Returns true if found, false otherwise.
-# Time complexity: ?
-# Space complexity: ?
+# Time complexity: O(log n), where n is the number of values in the array
+# Space complexity: O(1)
 def binary_search(array, length, value_to_find)
   low = array[0]
   high = length - 1
